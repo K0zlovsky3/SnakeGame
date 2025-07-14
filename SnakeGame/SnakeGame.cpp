@@ -98,8 +98,12 @@ void InitBoard() {
 void DrawBoard() {
     system("cls");
     for (int y = 0; y < rows; y++) {
+        if (y == 0) // доп.условие чтоб не было лишнего пробела
+            continue;
+        else
+            std::cout << std::endl; // нужно было добавить перенос в нужном месте по y
         for (int x = 0; x < cols; x++)
-            std::cout << field[y][x] << ' ';
+            std::cout << field[y][x] << " ";
     }
     std::cout << std::endl;
 }
