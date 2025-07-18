@@ -6,7 +6,7 @@
 
 void DrawBoard();
 void InitBoard();
-int PlayBoard();
+void PlayBoard();
 
 extern int playerX;
 extern int playerY;
@@ -18,7 +18,7 @@ int dx = 1; // направление по X
 
 bool isRunning = true;
 
-int PlayBoard() {
+void PlayBoard() {
     while (isRunning) {
         if (_kbhit()) { // _kbhit проверка ввода без прекращении программы
 

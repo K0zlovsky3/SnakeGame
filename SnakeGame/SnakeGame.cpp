@@ -6,7 +6,6 @@
 #include "Difficulty.h"
 #include "Player.h"
 
-
 int main()
 {
     setlocale(0, "");
