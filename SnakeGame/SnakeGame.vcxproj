@@ -125,13 +125,17 @@
   <ItemGroup>
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="Difficulty.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="SnakeGame.cpp" />
+    <ClCompile Include="Fruits.cpp" />
+    <ClCompile Include="PlayBoard.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Snake.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Board.h" />
     <ClInclude Include="Difficulty.h" />
-    <ClInclude Include="Player.h" />
+    <ClInclude Include="Fruits.h" />
+    <ClInclude Include="PlayBoard.h" />
+    <ClInclude Include="Snake.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

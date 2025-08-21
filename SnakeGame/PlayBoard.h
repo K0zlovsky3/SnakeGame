@@ -1,8 +1,6 @@
 #pragma once
 #include "Snake.h"
 
-void DrawBoard();
-void InitBoard();
-void Tick();
+void PlayBoard();
 
 extern Axis fruit;

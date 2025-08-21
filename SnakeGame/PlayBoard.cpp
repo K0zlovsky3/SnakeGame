@@ -3,13 +3,20 @@
 #include <conio.h>
 #include <Windows.h>
 #include "Board.h"
+#include "Fruits.h"
+#include "Snake.h"
+#include "Difficulty.h"
 
+void DifficultySet();
 void DrawBoard();
 void InitBoard();
-void PlayBoard();
+void Fruits();
+void SnakeInit(int startX, int startY, int lenght);
+void SnakeDebug();
+void Tick();
 
-extern int playerX;
-extern int playerY;
+//extern int playerX;
+//extern int playerY;
 extern const int cols;
 extern const int rows;
 
@@ -19,6 +26,10 @@ int dx = 1; // направление по X
 bool isRunning = true;
 
 void PlayBoard() {
+    DifficultySet();
+    SnakeInit(cols / 2, rows / 2, 3);
+    Fruits();
+
     while (isRunning) {
         if (_kbhit()) { // _kbhit проверка ввода без прекращении программы
 
@@ -49,12 +60,14 @@ void PlayBoard() {
             }
         }
 
-        playerX = (playerX + dx + cols) % cols;
-        playerY = (playerY + dy + rows) % rows;
+        //playerX = (playerX + dx + cols) % cols;
+        //playerY = (playerY + dy + rows) % rows;
 
+        Tick();
+        SnakeDebug();
         InitBoard();
         DrawBoard();
-
-        Sleep(90); // тик: пауза между обновлениями
+        
+        Sleep(150); // тик: пауза между обновлениями
     }
 }

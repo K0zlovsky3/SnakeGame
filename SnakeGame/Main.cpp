@@ -4,13 +4,13 @@
 #include <Windows.h>
 #include "Board.h"
 #include "Difficulty.h"
-#include "Player.h"
+#include "PlayBoard.h"
+#include "Fruits.h"
 
 int main()
 {
     setlocale(0, "");
-    DifficultySet();
-    InitBoard();
-    DrawBoard();
+    //InitBoard();
+    //DrawBoard();
     PlayBoard();
 }
